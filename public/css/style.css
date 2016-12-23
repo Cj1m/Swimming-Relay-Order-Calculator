@@ -1,0 +1,28 @@
+a.brand-logo {
+  font-size: 2rem;
+}
+
+div#bodycontainer {
+  margin-top: 10px;
+}
+
+a#csv-help:hover {
+  cursor: pointer;
+}
+
+div.cardtext {
+  width: calc(100% - 65px);
+  float: right;
+}
+
+blockquote {
+  border-left-color: rgb(58, 156, 236);
+}
+
+input:focus {
+  border-bottom-color: rgb(58, 156, 236) !important;
+}
+
+a.upload, a.submit {
+  width: 100%;
+}
