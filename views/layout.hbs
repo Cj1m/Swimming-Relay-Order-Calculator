@@ -8,7 +8,15 @@
     <!-- <link rel="icon" href="/public/res/" type="image/png"> -->
   </head>
   <body>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>  
-    {{{body}}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<div id="header-wrapper">
+		{{>header}}
+	</div>
+	<div id="content-wrapper">
+		{{{body}}}
+	</div>
+	<div id="footer-wrapper">
+		{{>footer}}
+	</div>
   </body>
 </html>

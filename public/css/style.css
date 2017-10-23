@@ -1,14 +1,52 @@
-html{
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-}
-
+/*Removing default set margins*/
 html, body, h1, h2, h3, h4, h5, h6, p, span, div, table, ul, ol, li, a {
   margin: 0;
 }
 
+/*Remove x-overflow on all pages*/
+html {
+	overflow-x: hidden;
+}
+
+/*Classes*/
+.container {
+	margin: 0 4%; /*Gutters*/
+}
+
+/*Removing link styling*/
 a {
   text-decoration: none;
   color: #000;
+}
+
+/*Header, content and footer sizing and positioning*/
+div#header-wrapper {
+	height: 7vh;
+	width: 100vw;
+	position: relative;
+}
+div#content-wrapper {
+	min-height: 88vh;
+	max-height: none;
+	width: 100vw;
+	position: relative;
+}
+div#footer-wrapper {
+	height: 5vh;
+	width: 100vw;
+	position: relative;
+}
+
+/*Header styling*/
+ul#header-links li {
+	list-style-type: none;
+	display: inline-block;
+
+}
+ul#header-links li a {
+	color: #fff;
+
+}
+div#header {
+	background-color: rgb(128, 28, 140);
 }

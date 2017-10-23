@@ -7,6 +7,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
 var index = require('./routes/index');
+var addrecords = require('./routes/addrecords');
+var viewrecords = require('./routes/viewrecords');
+var calculator = require('./routes/calculator');
+var results = require('./routes/results');
 
 var app = express();
 
@@ -33,6 +37,10 @@ app.engine('hbs', hbs.express4({
 }));
 
 app.use('/', index);
+app.use('/addrecords', addrecords);
+app.use('/viewrecords', viewrecords);
+app.use('/calculator', calculator);
+app.use('/results', results);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
