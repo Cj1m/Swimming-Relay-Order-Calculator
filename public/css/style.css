@@ -7,6 +7,10 @@
   font-family: "SourceSansPro Light";
   src: url("fonts/SourceSansPro-Light.ttf");
 }
+@font-face {
+  font-family: "SourceSansPro Bold";
+  src: url("fonts/SourceSansPro-Bold.ttf");
+}
 
 /*Removing default set margins and paddings*/
 html, body, h1, h2, h3, h4, h5, h6, p, span, div, table, ul, ol, li, a {
@@ -14,29 +18,39 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, div, table, ul, ol, li, a {
   padding: 0;
 }
 
-/*Remove x-overflow on all pages and adding universal font (that may be overridden when wanted)*/
+/*Remove x-overflow on all pages, adding universal font (that may be overridden when wanted) and universal bg colour*/
 html {
 	overflow-x: hidden;
   font-family: "SourceSansPro Regular";
+  background: url("../images/homebg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-/*Classes*/
+/*Universal Classes*/
 /*(1) Layout*/
 .container {
 	margin: 0 4%; /*Gutters*/
+  height: 100%;
 }
 /*(2) Buttons*/
-.btn-header {
+.btn {
   display: block;
   background-color: rgba(255, 255, 255, 0.1);
-  height: 4vh;
-  line-height: 4vh;
+  /*height: 4vh;
+  line-height: 4vh;*/
   color: #fff;
   width: 90%;
   border-radius: 9px;
+}
+/*(3) Element Styling*/
+.shadow {
   box-shadow:   0 3px 6px 0 rgba(0,0,0,0.08),
                 0 1px 10px 0 rgba(0,0,0,0.08),
                 0 3px 3px -1px rgba(0,0,0,0.14);
+}
+.nav-active {
+  border-bottom: 3px #fff solid;
 }
 
 /*Removing link styling*/
@@ -50,9 +64,6 @@ header#header-wrapper {
 	height: 7vh;
 	width: 100vw;
 	position: relative;
-  box-shadow:   0 3px 6px 0 rgba(0,0,0,0.08),
-                0 1px 10px 0 rgba(0,0,0,0.08),
-                0 3px 3px -1px rgba(0,0,0,0.14);
 }
 main#content-wrapper {
 	min-height: 88vh;
@@ -68,21 +79,19 @@ footer#footer-wrapper {
 
 /*Header styling*/
 div#header {
-  height: 100%;
   width: 100%;
-	background-color: rgb(74, 91, 177);
+  background-color: rgb(57, 124, 200);
 }
 h1#title {
   float: left;
   position: relative;
-  width: 30%;
   line-height: 7vh;
   color: #fff;
-  font-family: "SourceSansPro Regular";
+  font-size: 1.5rem;
+  font-family: "SourceSansPro Light";
 }
 span#pagename {
-  width: 20%;
-  line-height: 7.7vh;
+  line-height: 7.5vh;
   color: #fff;
   font-size: 1.3rem;
   font-family: "SourceSansPro Light";
@@ -93,7 +102,7 @@ ul#header-links {
   display: flex;
   justify-content: space-around;
   float: right;
-  padding-top: 1.5vh;
+  line-height: 7vh;
 }
 ul#header-links li {
   width: 100%;
@@ -101,6 +110,17 @@ ul#header-links li {
 }
 ul#header-links li a {
   font-size: 1.3rem;
+  color: #fff;
+}
+ul#header-links li a.a-nav-hover:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+ul#header-links li a.a-nav-hover:hover:after {
+  transform: scaleX(1);
 }
 
 /*Footer styling*/
@@ -110,6 +130,6 @@ div#footer {
   text-align: center;
   font-size: 1rem;
   line-height: 5vh;
-  background-color: rgb(92, 113, 222);
+  background-color: rgb(57, 124, 200);
   font-family: "SourceSansPro Light";
 }

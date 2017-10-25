@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>{{{domain}}} {{{title}}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/css/style.css">
     <!-- <link rel="icon" href="/public/res/" type="image/png"> -->
   </head>
+
   <body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<header id="header-wrapper">
-		{{>header}}
-	</header>
-	<main id="content-wrapper" class="container">
-		{{{body}}}
-	</main>
-	<footer id="footer-wrapper">
-		{{>footer}}
-	</footer>
+    <script type="text/javascript" src="../public/js/animation.js"></script>
+
+    <header id="header-wrapper">
+      {{>header}}
+    </header>
+    <main id="content-wrapper" class="container">
+      {{{body}}}
+    </main>
+    <footer id="footer-wrapper">
+      {{>footer}}
+    </footer>
   </body>
+
 </html>
