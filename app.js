@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
+//assigning routes
 var index = require('./routes/index');
 var addrecords = require('./routes/addrecords');
 var viewrecords = require('./routes/viewrecords');
@@ -13,9 +14,7 @@ var calculator = require('./routes/calculator');
 var results = require('./routes/results');
 
 var app = express();
-
 var port = 80;
-
 var server = http.createServer(app);
 
 // view engine setup
@@ -36,6 +35,7 @@ app.engine('hbs', hbs.express4({
     partialsDir: path.join(__dirname, '/views/partials')
 }));
 
+//use route on certain page
 app.use('/', index);
 app.use('/addrecords', addrecords);
 app.use('/viewrecords', viewrecords);
@@ -72,5 +72,4 @@ app.use(function(err, req, res, next) {
 });
 
 server.listen(port);
-
 module.exports = app;
