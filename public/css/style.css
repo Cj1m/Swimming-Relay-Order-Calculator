@@ -21,7 +21,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, div, table, ul, ol, li, a {
 /*Adding universal font (that may be overridden when wanted) and universal bg colour*/
 html {
   font-family: "SourceSansPro Regular";
-  background: url("../images/homebg.png");
+  background: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -121,7 +121,7 @@ div#header {
   width: 100%;
   background-color: rgb(57, 124, 200);
 }
-h1#title {
+h1#title a {
   float: left;
   position: relative;
   line-height: 7vh;
