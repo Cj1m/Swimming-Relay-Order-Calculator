@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //Adding underline to active page in header and also removing its hover animation
   $(function() {
     switch (window.location.pathname) {
       case '/':

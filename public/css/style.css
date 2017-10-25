@@ -18,9 +18,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, span, div, table, ul, ol, li, a {
   padding: 0;
 }
 
-/*Remove x-overflow on all pages, adding universal font (that may be overridden when wanted) and universal bg colour*/
+/*Adding universal font (that may be overridden when wanted) and universal bg colour*/
 html {
-	overflow-x: hidden;
   font-family: "SourceSansPro Regular";
   background: url("../images/homebg.png");
   background-repeat: no-repeat;
@@ -52,6 +51,49 @@ html {
 .nav-active {
   border-bottom: 3px #fff solid;
 }
+/*Row container (will have 12 columns)*/
+.row {
+  width: 100%;
+  display: inline-flex;
+  text-align: center;
+}
+/*Columns*/
+.col-1 {
+  width: 8.333%;
+}
+.col-2 {
+  width: 16.666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.333%;
+}
+.col-5 {
+  width: 41.666%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.333%;
+}
+.col-8 {
+  width: 66.666%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.333%;
+}
+.col-11 {
+  width: 91.666%;
+}
+.col-12 {
+  width: 100%;
+}
 
 /*Removing link styling*/
 a {
@@ -62,18 +104,15 @@ a {
 /*Header, content and footer sizing and positioning*/
 header#header-wrapper {
 	height: 7vh;
-	width: 100vw;
 	position: relative;
 }
 main#content-wrapper {
 	min-height: 88vh;
 	max-height: none;
-	width: 100vw;
 	position: relative;
 }
 footer#footer-wrapper {
 	height: 5vh;
-	width: 100vw;
 	position: relative;
 }
 
@@ -130,6 +169,38 @@ div#footer {
   text-align: center;
   font-size: 1rem;
   line-height: 5vh;
-  background-color: rgb(57, 124, 200);
+  background: #397cc8; /* Old browsers */
+  background: -moz-linear-gradient(left, #397cc8 0%, #76a0db 50%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #397cc8 0%,#76a0db 50%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #397cc8 0%,#76a0db 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   font-family: "SourceSansPro Light";
+}
+
+/*Index (Home) Styling*/
+div#tutorial {
+  color: #fff;
+  margin-top: 12vh;
+}
+h2#index-header, h2#index-header-2 {
+  text-align: center;
+}
+div#tutorial p {
+  margin-top: 4vh;
+  border-left: 6px #fff solid;
+  padding-left: 10px;
+}
+div#tutorial-pics, div#get-started-pics {
+  margin: 6vh 0;
+  position: relative;
+}
+div#tutorial-pics img, div#get-started-pics img {
+  width: 100%;
+}
+div#get-started {
+  color: rgb(57, 124, 200);
+}
+div#get-started p {
+  margin-top: 4vh;
+  border-left: 6px rgb(57, 124, 200) solid;
+  padding-left: 10px;
 }
