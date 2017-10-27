@@ -103,7 +103,7 @@ a {
 
 /*Header, content and footer sizing and positioning*/
 header#header-wrapper {
-	height: 7vh;
+	min-height: 7vh;
 	position: relative;
 }
 main#content-wrapper {
@@ -112,7 +112,7 @@ main#content-wrapper {
 	position: relative;
 }
 footer#footer-wrapper {
-	height: 5vh;
+	min-height: 5vh;
 	position: relative;
 }
 
@@ -164,7 +164,6 @@ ul#header-links li a.a-nav-hover:hover:after {
 
 /*Footer styling*/
 div#footer {
-  height: 100%;
   color: #fff;
   text-align: center;
   font-size: 1rem;
